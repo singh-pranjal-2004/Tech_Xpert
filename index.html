@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/cf9cbf3728.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+            /* Dark background color */
+            color: #ffffff;
+            /* Light text color */
+        }
+
+        .exploreColor {
+            background-color: aliceblue;
+            /* Darker background color for specific section */
+            color: #3b3a3a;
+        }
+
+        .navbar {
+            position: fixed; /* Make the navbar fixed */
+            top: 0; /* Position it at the top */
+            width: 85vw;
+            z-index: 1000; /* Ensure it's above other content */
+            background:radial-gradient(black, rgba(255, 255, 255, 0.151)); /* Dark background color for navbar */
+            border-bottom: 2px solid rgba(173, 212, 246, 0.772);
+            border-bottom-left-radius: 20px; /* Rounded top-left corner */
+            border-bottom-right-radius: 20px; /* Rounded top-right corner */
+        }
+        
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            /* Light text color for navbar links */
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+            /* Invert color for navbar toggler icon */
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent dark background for carousel captions */
+        }
+
+        .exploreColor {
+            background-color: black;
+            color: white;
+        }
+
+        .dark-theme {
+            /* Add your dark theme styles here */
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btntgl {
+            background-color:#C8C8C8; /* Use the hexadecimal value for $gray-300 */
+        }
+
+        header .container{
+            display: flex;
+            justify-content: center;
+        }
+        .btn-primary{
+            background-color: transparent;
+            border: 3px solid aqua;
+        }
+        .btn-primary:hover{
+            background-color: aqua;
+            border: 3px solid aqua;
+            color: black;
+        }
+        .img-thumbnail{
+            height: 250px;
+        }
+        .carousel-item{
+            border-radius: 40px;
+            overflow: hidden;
+        }
+        .cor{
+            background-color: black;
+            border: 2px solid rgba(255, 255, 255, 0.75);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: 0.3s ease-out;
+        }
+        .cor:hover{
+            transform: scale(1.05);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.507);
+        }
+        .cor-img{
+            height: 150px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.445));
+        }
+        .dis-but h2{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .dis-but .but-set-1{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .dis-but .but-set-2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            justify-content: center;
+        }
+        .dis-but .but-set-1 button{
+            width: 120px;
+            border-radius: 5px;
+
+        }
+        .dis-but .but-set-2 button{
+            width: 120px;
+            border-radius: 5px;
+        }
+        .cor-row{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 20px;
+        }
+        .xplore-buttons{
+            font-size: 30px;
+        }
+        .courses-section>button{
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border-color: aqua;
+            color: aqua;
+            font-weight: 700;
+            transition: 0.3s ease-out;
+        }
+        .courses-section>button:hover{
+            background-color: aqua;
+            color: black;
+            transform: scale(1.1);
+        }
+        .about-us-section{
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .ready-to-join{
+            background-color: black;
+        }
+    </style>
+
+    <title>TechXpert</title>
+</head>
+
+<body>
+    <header class="container" style="display: flex; justify-content: center;">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg mb-5" style="width: 85vw; ">
+            <div class="container">
+                <a class="navbar-brand fs-2 fw-bold" href="#" style="color: wheat;">TechXpert</a>
+                <div class="d-flex justify-content-end">
+                    <button type="button"
+                    class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold">Register</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">Resources</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">Deals</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">About</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">Testimonials</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <!-- Toggle button for dark/light theme -->
+                    <button id="themeToggle"
+                    class="btn btn-outline-dark d-none d-lg-block me-3 fw-bold btntgl">Toggle Theme</button>
+                </div>
+                <button type="button"
+                class="btn btn-outline-info fw-bold d-none d-lg-block d-xl-block d-xxl-block">Register</button>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Slider Start -->
+        
+        <section class="mt-5 container h-100 mb-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner position-relative" style="margin-top: 10vh;">
+                    <div class="carousel-item active">
+                        <img src="images/cover/cover-1.png" class="d-block w-100 rounded" alt="cover 1">
+                        <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                            style="--bs-bg-opacity: .5;">
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Best Learning Platform</h1>
+                            <p class="sliderPara">Empowering Minds, Enabling Continuous Growth, and Shaping Bright Futures through Innovative Learning Opportunities.</p>
+                            <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cover/cover-2.jpg" class="d-block w-100 rounded" alt="cover 2">
+                        <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                            style="--bs-bg-opacity: .5;">
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Leading Education Hub</h1>
+                            <p class="sliderPara"> Igniting Curiosity, Fostering Excellence, and Transforming Aspirations into Achievements.</p>
+                            <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cover/cover-3.jpg" class="d-block w-100 rounded" alt="cover 3">
+                        <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                            style="--bs-bg-opacity: .5;">
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Top-tier Learning Portal</h1>
+                            <p class="sliderPara">Cultivating Knowledge, Inspiring Success, and Nurturing Lifelong Learning Journeys.</p>
+                            <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev d-none d-md-block d-lg-block d-xl-block d-xxl-block" type="button"
+                    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-md-block d-lg-block d-xl-block d-xxl-block" type="button"
+                    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- Slider End -->
+    </header>
+
+    <main>
+        <!-- Courses Section Start -->
+        <section class="container-fluid d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center col-lg-10 col-md-11 col-sm-11 courses-section">
+                <div class="mb-5">
+                    <h1 class="fs-1 fw-bold">Discover Top Learning Resources Here</h1>
+                    <p>Browse through our Highly Acclaimed Resources listed for your convenience below.</p>
+                </div>
+                <div class="cor-row">
+                    <div class="cor">
+                        <img src="./images/courses-logo/python.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>Python</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cor">
+                        <img src="./images/courses-logo/c.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>C Programming</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cor">
+                        <img src="./images/courses-logo/java.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>Java</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cor-row">
+                    <div class="cor">
+                        <img src="./images/courses-logo/html.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>HTML</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cor">
+                        <img src="./images/courses-logo/css.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>CSS</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cor">
+                        <img src="./images/courses-logo/js.webp" alt="python" class="cor-img">
+                        <div class="dis-but">
+                            <h2>Java Script</h2>
+                            <div class="but-set-1">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button>
+                            </div>
+                            <div class="but-set-2">
+                                <button type="button" class="btn btn-outline-success" class="cor-buttons">Cheat Sheets</button>
+                                <button type="button" class="btn btn-outline-info" class="cor-buttons">Notes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Courses End -->
+                    <button type="button" class="btn btn-outline-success" class="xplore-buttons">Xplore More ...</button>
+            </div>
+        </section>
+        <!-- Courses Section End -->
+
+        <!-- Explore Section Start -->
+        <section class="container mb-5 pb-5 pt-5">
+            <div class="card border rounded-10" style="overflow: hidden;">
+                <div class="row g-0">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/AboutUs/ManDark.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-6 col-lg-8 d-flex  exploreColor">
+                        <div class="card-body px-lg-5 d-flex flex-column justify-content-center">
+                            <h1 class="fw-bold pb-lg-2">Explore The TechXpert Institute</h1>
+                            <p class="">Our institute is the market-leading e-learning platform. By joining our
+                                institute you can learn so many things. Nowadays e-learning is the best platform for
+                                learning. We offer you many courses, from which you can choose one or more.</p>
+                            <div class="d-flex my-md-3 my-lg-3">
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">3.2K+</h1>
+                                    <h5>Online Course</h5>
+                                </div>
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">600+</h1>
+                                    <h5>Expert Member</h5>
+                                </div>
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">1K+</h1>
+                                    <h5>Rating & Review</h5>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary fw-bold px-4 py-2">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Explore Section End -->
+
+        <!-- Ready To Join Section Start -->
+        <section class="container mt-5 mb-5">
+            <div
+                class="d-md-block d-lg-flex justify-content-between align-items-center bg-info rounded p-5 text-center text-lg-start">
+                <div class="text-white">
+                    <h1 class="fw-bold">Ready To Join?</h1>
+                    <p>We have so many courses, that you can enroll. Register for enrollment.</p>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light px-3 py-2 text-info fw-bold ready-to-join" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Register Now</button>
+                </div>
+            </div>
+        </section>
+        <!-- Ready To Join Section End -->
+
+        <!-- Modal Section Start -->
+        <!-- <section>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="exampleModalLabel">Register Now</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-email" class="col-form-label">E-mail Id : </label>
+                                    <input type="email" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Password :</label>
+                                    <input type="password" class="form-control" id="recipient-password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Modal Section End -->
+
+        <!-- Successfull Students Section Start -->
+        <section class="container mb-5 pt-5">
+            <div>
+                <div class="mb-5 text-center text-md-start">
+                    <h1 class="fw-bold pb-4">Introducing Our Successful Alumni</h1>
+                    <p class="text-secondary">Meet the Achievers who Excelled after Completing Our Courses.</p>
+                </div>
+                <div class="row g-3 mb-5">
+                    <!-- Single Student -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="border rounded">
+                            <img src="images/Alumni/Suryansh.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 1">
+                            <div class="ps-3 pt-3">
+                                <p class="text-secondary">
+                                    <span class="text-light fw-bold">Suryansh Pandey</span><br>UI/UX Designer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Student -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="border rounded">
+                            <img src="images/Alumni/Pranjal.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 2">
+                            <div class="ps-3 pt-3">
+                                <p class="text-secondary">
+                                    <span class="text-light fw-bold">Pranjal Ashok Singh</span><br>Backend Designer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Student -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="border rounded">
+                            <img src="images/Alumni/Sushil.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 3" style="overflow: hidden;">
+                            <div class="ps-3 pt-3">
+                                <p class="text-secondary">
+                                    <span class="fw-bold text-light">Sushil Kumar Verma</span><br>Backend Designer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Student -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="border rounded">
+                            <img src="images/student/student-4.png" class="img-fluid col-md-12 col-12 rounded" alt="Student 4">
+                            <div class="ps-3 pt-3">
+                                <p class="text-secondary">
+                                    <span class="fw-bold text-light">Nishi Akter</span><br>Web Developer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary fw-bold px-4 py-2">View All</button>
+                </div>
+            </div>
+        </section>
+        <!-- Successfull Students Section End -->
+
+        <!-- Students Feedback Start -->
+        <section class="container">
+            <div>
+                <div class="text-center">
+                    <h1 class="fw-bolder">Some Students Feedback</h1>
+                    <p>Here is some feedback from our formal students</p>
+                </div>
+                <div>
+                    <div class="row g-3 mb-5">
+                        <!-- Single Student Feedback -->
+                        <div class="col-lg-6">
+                            <div class="border rounded p-4">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="py-3">
+                                    <p class="text-secondary">This E-Learning platform is very good. I took a course in
+                                        web development. They teach us properly. It's interesting that, From a beginner,
+                                        right now I am a professional web developer. Thanks to TechXpert institute.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <p class="ps-3 text-secondary"><span class="text-light fw-bold">Awlad
+                                            Hossain</span><br>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Student Feedback -->
+                        <div class="col-lg-6">
+                            <div class="border rounded p-4">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="py-3">
+                                    <p class="text-secondary">This E-Learning platform is very good. I took a course in
+                                        graphics design. They teach us properly. It's interesting that, From a beginner,
+                                        right now I am a professional graphics designer. Thanks to TechXpert institute.
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <p class="ps-3 text-secondary"><span class="fw-bold text-light">Shanta
+                                            Akter</span><br>Graphic Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mb-5 d-lg-none">
+                <button class="btn btn-primary fw-bold px-4 py-2">View All</button>
+            </div>
+        </section>
+        <!-- Students Feedback End -->
+
+        <!-- Accordion Start -->
+        <section class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Frequently Asked Questions</h1>
+                <p class="text-secondary">Some frequently asked questions answers are given below,</p>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <!-- 1st Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold border rounded-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            What are the differences between flexbox and grid?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The basic difference between flexbox and grid Layout is that flexbox was designed for layout
+                            in one dimension - either a row or a column. Grid was designed for two-dimensional layout -
+                            rows, and columns at the same time.
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            What are the differences between bootstrap and tailwind CSS?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The main difference between TailwindCSS and Bootstrap is that Tailwind CSS is not a UI kit.
+                            Unlike UI kits such as Bootstrap, Tailwind CSS doesn't have a default theme or built-in UI
+                            components. Instead, it comes with predesigned widgets you can use to build your site from
+                            scratch.
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            What is CSS Box Model?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The CSS box model is essentially a box that wraps around every HTML element. It consists of:
+                            margins, borders, padding, and the actual content.
+                        </div>
+                    </div>
+                </div>
+                <!-- 4th Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            What is a Semantic tag?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The HTML semantics refers to the tags that provide meaning to an HTML page rather than just
+                            presentation. It makes HTML more comprehensible by better defining the different sections
+                            and layout of web pages.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Accordion End -->
+
+        <!-- Trusted Companies Section Start -->
+        <section class="d-none d-lg-block container mt-5">
+            <div>
+                <div class="text-center pb-5">
+                    <h1 class="fw-bold">Trusted by over 800+ companies</h1>
+                </div>
+                <div class="d-flex justify-content-between mb-5 pb-5">
+                    <div><img src="images/company/company-1.png" alt="Company 1"></div>
+                    <div><img src="images/company/company-2.png" alt="Company 2"></div>
+                    <div><img src="images/company/company-3.png" alt="Company 3"></div>
+                    <div><img src="images/company/company-4.png" alt="Company 4"></div>
+                    <div><img src="images/company/company-5.png" alt="Company 5"></div>
+                    <div><img src="images/company/company-6.png" alt="Company 6"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Trusted Companies Section End -->
+    </main>
+
+    <!-- Footer -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark p-5">
+        <div class="text-white text-center mt-5">
+            <h1 class="fw-bold">TechXpert</h1>
+            <p>6/1 Shah Road, Narayanganj,<br>Bangladesh</p>
+            <p>Privacy Ploicy | Terms of use</p>
+        </div>
+        <div class="text-center display-6 mb-5">
+            <a href="https://www.facebook.com" target="_blank"><i
+                    class="fa-brands fa-facebook-square text-white px-2"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter text-white px-2"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i
+                    class="fa-brands fa-instagram text-white px-2"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin text-white px-2"></i></a>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Function to toggle between dark and light themes
+        function toggleTheme() {
+            body.classList.toggle('dark-theme');
+        }
+
+        // Add event listener to toggle button
+        themeToggle.addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>
