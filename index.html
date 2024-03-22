@@ -27,27 +27,24 @@
             /* Darker background color for specific section */
             color: #3b3a3a;
         }
-
         .navbar {
-            position: fixed; /* Make the navbar fixed */
-            top: 0; /* Position it at the top */
+            position: fixed;
+            top: 0;
             width: 85vw;
-            z-index: 1000; /* Ensure it's above other content */
-            background:radial-gradient(black, rgba(255, 255, 255, 0.151)); /* Dark background color for navbar */
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.196), rgba(255, 255, 255, 0.05));
             border-bottom: 2px solid rgba(173, 212, 246, 0.772);
-            border-bottom-left-radius: 20px; /* Rounded top-left corner */
-            border-bottom-right-radius: 20px; /* Rounded top-right corner */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            backdrop-filter: blur(1px); /* Apply blur effect for glass-like appearance */
         }
-        
 
         .navbar-nav .nav-link {
             color: #ffffff;
-            /* Light text color for navbar links */
         }
 
         .navbar-toggler-icon {
             filter: invert(1);
-            /* Invert color for navbar toggler icon */
         }
 
         .carousel-caption {
@@ -159,7 +156,7 @@
             transition: 0.3s ease-out;
         }
         .courses-section>button:hover{
-            background-color: aqua;
+            background-color: aliceblue;
             color: black;
             transform: scale(1.1);
         }
@@ -215,6 +212,11 @@
         .more-questions button:hover{
             background-color: white;
             color: black;
+        }
+
+        #registerNow:hover {
+            background-color: #ffffff;
+            border: 1px solid black;
         }
     </style>
 
@@ -457,14 +459,13 @@
 
         <!-- Ready To Join Section Start -->
         <section class="container mt-5 mb-5">
-            <div
-                class="d-md-block d-lg-flex justify-content-between align-items-center bg-info rounded p-5 text-center text-lg-start">
+            <div class="d-md-block d-lg-flex justify-content-between align-items-center rounded p-5 text-center text-lg-start" style="background-color: rgb(94, 132, 165);">
                 <div class="text-white">
-                    <h1 class="fw-bold">Ready To Join?</h1>
+                    <h1 class="fw-bold" style="color: #ffffff;">Ready To Join?</h1>
                     <p>We have so many courses, that you can enroll. Register for enrollment.</p>
                 </div>
                 <div>
-                    <a href="http://localhost:3000/login"><button type="button" class="btn btn-light px-3 py-2 text-info fw-bold ready-to-join" data-bs-toggle="modal"
+                    <a href="http://localhost:3000/login"><button type="button" id="registerNow" class="btn px-3 py-2 text-success fw-bold ready-to-join" data-bs-toggle="modal"
                         data-bs-target="#exampleModal" data-bs-whatever="@mdo">Register Now</button></a>
                 </div>
             </div>
