@@ -180,6 +180,42 @@
             border: 1px solid white;
 
         }
+
+        .more-questions{
+            border: 2px solid white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+            padding: 20px;
+            max-width: 55%;
+            margin: auto;
+        }
+        .more-questions p:nth-child(1){
+            text-align: center;
+            font-size: 40px;
+        }
+        .more-questions p:nth-child(3){
+            font-size: 20px;
+            text-align: center;
+            max-width: 600px;
+        }
+        .more-questions button{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+        .more-questions button:hover{
+            background-color: white;
+            color: black;
+        }
     </style>
 
     <title>TechXpert</title>
@@ -640,6 +676,19 @@
         </section>
         <!-- Accordion End -->
 
+        <!-- More Questions Start  -->
+        <div class="more-questions">
+            <p>STILL HAVE QUESTIONS!!</p>
+            <div class="doodle-icons">
+                <img src="images/moreQuestions/dood1.png" alt="">
+                <img src="images/moreQuestions/dood2.png" alt="">
+                <img src="images/moreQuestions/dood3.png" alt="">
+            </div>
+            <p>If you cannot find answers to your questions in our FAQ, you can always contact us. We will answer to you asap</p>
+            <button>Contact Us</button>
+        </div>
+        <!-- More Questions end  -->
+
         <!-- Trusted Companies Section Start -->
         <section class="d-none d-lg-block container mt-5">
             <div>
@@ -656,6 +705,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Trusted Companies Section End -->
     </main>
 
