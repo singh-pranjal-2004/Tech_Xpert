@@ -214,10 +214,7 @@
             color: black;
         }
 
-        #registerNow:hover {
-            background-color: #ffffff;
-            border: 1px solid black;
-        }
+      
     </style>
 
     <title>TechXpert</title>
@@ -460,13 +457,14 @@
         <!-- Ready To Join Section Start -->
         <section class="container mt-5 mb-5">
             <div class="d-md-block d-lg-flex justify-content-between align-items-center rounded p-5 text-center text-lg-start" style="background-color: rgb(94, 132, 165);">
-                <div class="text-white">
+                <div class="text-white " >
                     <h1 class="fw-bold" style="color: #ffffff;">Ready To Join?</h1>
                     <p>We have so many courses, that you can enroll. Register for enrollment.</p>
                 </div>
-                <div>
-                    <a href="http://localhost:3000/login"><button type="button" id="registerNow" class="btn px-3 py-2 text-success fw-bold ready-to-join" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Register Now</button></a>
+                <div id="registerNow">
+                    <a href="http://localhost:3000/login">
+                        <button type="button" class="btn btn btn-success">Register Now</button>
+                    </a>
                 </div>
             </div>
         </section>
