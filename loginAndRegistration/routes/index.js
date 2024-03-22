@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
 				res.send({ "Success": "Wrong password!" });
 			}
 		} else {
-			res.send({ "Success": "This Email Is not registered!" });
+			res.send({ "Success": "This Email Is not regestered!" });
 		}
 	});
 });
