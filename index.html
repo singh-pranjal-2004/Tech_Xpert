@@ -176,8 +176,8 @@
         }
 
         .accordion-item.active {
-            background-color: black;
-            color: white;
+            background-color: rgb(0, 0, 0);
+            color: rgb(85, 255, 0);
         }
     </style>
 
@@ -682,6 +682,8 @@
     <!-- Footer End -->
 
     <!-- Bootstrap Script -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
@@ -696,6 +698,23 @@
 
         // Add event listener to toggle button
         themeToggle.addEventListener('click', toggleTheme);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordionItems = document.querySelectorAll(".accordion-item");
+
+            accordionItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    // Remove active class from all accordion items
+                    accordionItems.forEach(item => {
+                        item.classList.remove("active");
+                    });
+
+                    // Add active class to the clicked accordion item
+                    this.classList.add("active");
+                });
+            });
+        });
+
     </script>
 </body>
 
