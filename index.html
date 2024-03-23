@@ -27,6 +27,7 @@
             /* Darker background color for specific section */
             color: #3b3a3a;
         }
+
         .navbar {
             position: fixed;
             top: 0;
@@ -36,7 +37,8 @@
             border-bottom: 2px solid rgba(173, 212, 246, 0.772);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
-            backdrop-filter: blur(1px); /* Apply blur effect for glass-like appearance */
+            backdrop-filter: blur(1px);
+            /* Apply blur effect for glass-like appearance */
         }
 
         .navbar-nav .nav-link {
@@ -64,30 +66,36 @@
         }
 
         .btntgl {
-            background-color:#C8C8C8; /* Use the hexadecimal value for $gray-300 */
+            background-color: #C8C8C8;
+            /* Use the hexadecimal value for $gray-300 */
         }
 
-        header .container{
+        header .container {
             display: flex;
             justify-content: center;
         }
-        .btn-primary{
+
+        .btn-primary {
             background-color: transparent;
             border: 3px solid aqua;
         }
-        .btn-primary:hover{
+
+        .btn-primary:hover {
             background-color: aqua;
             border: 3px solid aqua;
             color: black;
         }
-        .img-thumbnail{
+
+        .img-thumbnail {
             height: 250px;
         }
-        .carousel-item{
+
+        .carousel-item {
             border-radius: 40px;
             overflow: hidden;
         }
-        .cor{
+
+        .cor {
             background-color: black;
             border: 2px solid rgba(255, 255, 255, 0.75);
             display: flex;
@@ -99,43 +107,51 @@
             border-radius: 10px;
             transition: 0.3s ease-out;
         }
-        .cor:hover{
+
+        .cor:hover {
             transform: scale(1.05);
             border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.507);
         }
-        .cor-img{
+
+        .cor-img {
             height: 150px;
             margin-bottom: 20px;
             filter: drop-shadow(0px 2px 5px rgb(167, 167, 167));
         }
-        .dis-but h2{
+
+        .dis-but h2 {
             font-size: 30px;
             margin-bottom: 20px;
         }
-        .dis-but .but-set-1{
+
+        .dis-but .but-set-1 {
             display: flex;
             justify-content: space-evenly;
             gap: 10px;
             justify-content: center;
             margin-bottom: 20px;
         }
-        .dis-but .but-set-2{
+
+        .dis-but .but-set-2 {
             display: flex;
             justify-content: space-evenly;
             gap: 10px;
             justify-content: center;
         }
-        .dis-but .but-set-1 button{
+
+        .dis-but .but-set-1 button {
             width: 120px;
             border-radius: 5px;
 
         }
-        .dis-but .but-set-2 button{
+
+        .dis-but .but-set-2 button {
             width: 120px;
             border-radius: 5px;
         }
-        .cor-row{
+
+        .cor-row {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -143,10 +159,12 @@
             gap: 50px;
             margin-bottom: 20px;
         }
-        .xplore-buttons{
+
+        .xplore-buttons {
             font-size: 30px;
         }
-        .courses-section>button{
+
+        .courses-section>button {
             font-size: 20px;
             padding: 10px 20px;
             border-radius: 10px;
@@ -155,30 +173,35 @@
             font-weight: 700;
             transition: 0.3s ease-out;
         }
-        .courses-section>button:hover{
+
+        .courses-section>button:hover {
             background-color: aliceblue;
             color: black;
             transform: scale(1.1);
         }
-        .about-us-section{
+
+        .about-us-section {
             border-radius: 10px;
             overflow: hidden;
         }
-        .ready-to-join{
+
+        .ready-to-join {
             background-color: black;
         }
-        .accordion-button{
+
+        .accordion-button {
             background-color: black;
             color: white;
         }
-        .accordion-body{
+
+        .accordion-body {
             background-color: black;
             color: white;
             border: 1px solid white;
 
         }
 
-        .more-questions{
+        .more-questions {
             border: 2px solid white;
             border-radius: 20px;
             display: flex;
@@ -191,16 +214,19 @@
             max-width: 55%;
             margin: auto;
         }
-        .more-questions p:nth-child(1){
+
+        .more-questions p:nth-child(1) {
             text-align: center;
             font-size: 40px;
         }
-        .more-questions p:nth-child(3){
+
+        .more-questions p:nth-child(3) {
             font-size: 20px;
             text-align: center;
             max-width: 600px;
         }
-        .more-questions button{
+
+        .more-questions button {
             background-color: transparent;
             color: white;
             border: 2px solid white;
@@ -209,12 +235,17 @@
             border-radius: 10px;
             transition: 0.3s ease;
         }
-        .more-questions button:hover{
+
+        .more-questions button:hover {
             background-color: white;
             color: black;
         }
 
-      
+        #non-clickable-div {
+            pointer-events: none;
+            filter: blur(2px)
+        }
+
     </style>
 
     <title>TechXpert</title>
@@ -228,7 +259,7 @@
                 <a class="navbar-brand fs-2 fw-bold" href="#" style="color: wheat;">TechXpert</a>
                 <div class="d-flex justify-content-end">
                     <button type="button"
-                    class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold">Register</button>
+                        class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold">Register</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -243,7 +274,7 @@
                             <a class="nav-link fw-semibold" href="#">Resources</a>
                         </li>
                         <li class="nav-item px-4">
-                            <a class="nav-link fw-semibold" href="#">Deals</a>
+                            <a class="nav-link fw-semibold" href="#">CheatSheet</a>
                         </li>
                         <li class="nav-item px-4">
                             <a class="nav-link fw-semibold" href="#">About</a>
@@ -258,17 +289,17 @@
                 </div>
                 <div>
                     <!-- Toggle button for dark/light theme -->
-                    <button id="themeToggle"
-                    class="btn btn-outline-dark d-none d-lg-block me-3 fw-bold btntgl">Toggle Theme</button>
+                    <button id="themeToggle" class="btn btn-outline-dark d-none d-lg-block me-3 fw-bold btntgl">Toggle
+                        Theme</button>
                 </div>
                 <a href="http://localhost:3000/login"><button type="button"
-                class="btn btn-outline-info fw-bold d-none d-lg-block d-xl-block d-xxl-block">Register</button></a>
+                        class="btn btn-outline-info fw-bold d-none d-lg-block d-xl-block d-xxl-block">Register</button></a>
             </div>
         </nav>
         <!-- Navbar End -->
 
         <!-- Slider Start -->
-        
+
         <section class="mt-5 container h-100 mb-5">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner position-relative" style="margin-top: 10vh;">
@@ -276,8 +307,10 @@
                         <img src="images/cover/cover-1.png" class="d-block w-100 rounded" alt="cover 1">
                         <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
                             style="--bs-bg-opacity: .5;">
-                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Best Learning Platform</h1>
-                            <p class="sliderPara">Empowering Minds, Enabling Continuous Growth, and Shaping Bright Futures through Innovative Learning Opportunities.</p>
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Best Learning
+                                Platform</h1>
+                            <p class="sliderPara">Empowering Minds, Enabling Continuous Growth, and Shaping Bright
+                                Futures through Innovative Learning Opportunities.</p>
                             <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
                         </div>
                     </div>
@@ -285,8 +318,10 @@
                         <img src="images/cover/cover-2.jpg" class="d-block w-100 rounded" alt="cover 2">
                         <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
                             style="--bs-bg-opacity: .5;">
-                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Leading Education Hub</h1>
-                            <p class="sliderPara"> Igniting Curiosity, Fostering Excellence, and Transforming Aspirations into Achievements.</p>
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Leading Education
+                                Hub</h1>
+                            <p class="sliderPara"> Igniting Curiosity, Fostering Excellence, and Transforming
+                                Aspirations into Achievements.</p>
                             <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
                         </div>
                     </div>
@@ -294,8 +329,10 @@
                         <img src="images/cover/cover-3.jpg" class="d-block w-100 rounded" alt="cover 3">
                         <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
                             style="--bs-bg-opacity: .5;">
-                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Top-tier Learning Portal</h1>
-                            <p class="sliderPara">Cultivating Knowledge, Inspiring Success, and Nurturing Lifelong Learning Journeys.</p>
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 300px;">Top-tier Learning
+                                Portal</h1>
+                            <p class="sliderPara">Cultivating Knowledge, Inspiring Success, and Nurturing Lifelong
+                                Learning Journeys.</p>
                             <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
                         </div>
                     </div>
@@ -318,7 +355,8 @@
     <main>
         <!-- Courses Section Start -->
         <section class="container-fluid d-flex justify-content-center">
-            <div class="d-flex flex-column align-items-center justify-content-center text-center col-lg-10 col-md-11 col-sm-11 courses-section">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center text-center col-lg-10 col-md-11 col-sm-11 courses-section">
                 <div class="mb-5">
                     <h1 class="fs-1 fw-bold">Discover Top Learning Resources Here</h1>
                     <p>Browse through our Highly Acclaimed Resources listed for your convenience below.</p>
@@ -329,12 +367,16 @@
                         <div class="dis-but">
                             <h2>Python</h2>
                             <div class="but-set-1">
-                                <a href="files/quiz/python.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href="./files/videos/video_python.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="files/quiz/python.html"><button type="button" class="btn btn-outline-success"
+                                        class="cor-buttons">Quiz</button></a>
+                                <a href="./files/videos/video_python.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_python.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/cheatsheet/cheat_python.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_python.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/cheatsheet/cheat_python.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
@@ -343,12 +385,16 @@
                         <div class="dis-but">
                             <h2>C Programming</h2>
                             <div class="but-set-1">
-                                <a href="./files/quiz/c.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href="./files/videos/video_c.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="./files/quiz/c.html"><button type="button" class="btn btn-outline-success"
+                                        class="cor-buttons">Quiz</button></a>
+                                <a href="./files/videos/video_c.html"><button type="button" class="btn btn-outline-info"
+                                        class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_c.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/notes/cNotes.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_c.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/notes/cNotes.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
@@ -357,62 +403,79 @@
                         <div class="dis-but">
                             <h2>Java</h2>
                             <div class="but-set-1">
-                                <a href="./files/quiz/java.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href="#"><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="./files/quiz/java.html"><button type="button" class="btn btn-outline-success"
+                                        class="cor-buttons">Quiz</button></a>
+                                <a href="#"><button type="button" class="btn btn-outline-info"
+                                        class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_java.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/notes/javaNotes.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_java.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/notes/javaNotes.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="cor-row">
-                    <div class="cor">
+                    <div class="cor" id="non-clickable-div" style="pointer-events: none;">
                         <img src="./images/courses-logo/html.webp" alt="python" class="cor-img">
                         <div class="dis-but">
                             <h2>HTML</h2>
                             <div class="but-set-1">
-                                <a href="./files/quiz/html.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href="./files/videos/video_html.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="./files/quiz/html.html"><button type="button" class="btn btn-outline-success"
+                                        class="cor-buttons">Quiz</button></a>
+                                <a href="./files/videos/video_html.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_html.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/notes/htmlNotes.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_html.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/notes/htmlNotes.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="cor">
+                    <div class="cor" id="non-clickable-div" style="pointer-events: none;">
                         <img src="./images/courses-logo/css.webp" alt="python" class="cor-img">
                         <div class="dis-but">
                             <h2>CSS</h2>
                             <div class="but-set-1">
-                                <a href="./files/quiz/bootstrap.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href=""><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="./files/quiz/bootstrap.html"><button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
+                                <a href=""><button type="button" class="btn btn-outline-info"
+                                        class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_css3.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/notes/cssNotes.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_css3.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/notes/cssNotes.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="cor">
+                    <div class="cor" id="non-clickable-div" style="pointer-events: none;">
                         <img src="./images/courses-logo/js.webp" alt="python" class="cor-img">
                         <div class="dis-but">
                             <h2>Java Script</h2>
                             <div class="but-set-1">
-                                <a href="./files/quiz/javascript.html"><button type="button" class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
-                                <a href="./files/videos/video_js.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
+                                <a href="./files/quiz/javascript.html"><button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Quiz</button></a>
+                                <a href="./files/videos/video_js.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Videos</button></a>
                             </div>
                             <div class="but-set-2">
-                                <a href="../TechXpert/files/cheatsheet/cheat_javascript.html"><button type="button" class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="./files/notes/jsNotes.html"> <button type="button" class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="../TechXpert/files/cheatsheet/cheat_javascript.html"><button type="button"
+                                        class="btn btn-outline-info" class="cor-buttons">Cheat Sheets</button></a>
+                                <a href="./files/notes/jsNotes.html"> <button type="button"
+                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <!-- Courses End -->
-                    <button type="button" class="btn btn-outline-success" class="xplore-buttons">Explore More</button>
+                <!-- Courses End -->
+                <button type="button" class="btn btn-outline-success" class="xplore-buttons" id="non-clickable-div"
+                    style="pointer-events: none;">Explore More</button>
             </div>
         </section>
         <!-- Courses Section End -->
@@ -456,8 +519,9 @@
 
         <!-- Ready To Join Section Start -->
         <section class="container mt-5 mb-5">
-            <div class="d-md-block d-lg-flex justify-content-between align-items-center rounded p-5 text-center text-lg-start" style="background-color: rgb(94, 132, 165);">
-                <div class="text-white " >
+            <div class="d-md-block d-lg-flex justify-content-between align-items-center rounded p-5 text-center text-lg-start"
+                style="background-color: rgb(94, 132, 165);">
+                <div class="text-white ">
                     <h1 class="fw-bold" style="color: #ffffff;">Ready To Join?</h1>
                     <p>We have so many courses, that you can enroll. Register for enrollment.</p>
                 </div>
@@ -481,7 +545,8 @@
                     <!-- Single Student -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="border rounded">
-                            <img src="images/Alumni/Suryansh.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 1">
+                            <img src="images/Alumni/Suryansh.jpg" class="img-fluid col-md-12 col-12 rounded"
+                                alt="Student 1">
                             <div class="ps-3 pt-3">
                                 <p class="text-secondary">
                                     <span class="text-light fw-bold">Suryansh Pandey</span><br>UI/UX Designer
@@ -492,7 +557,8 @@
                     <!-- Single Student -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="border rounded">
-                            <img src="images/Alumni/Pranjal.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 2">
+                            <img src="images/Alumni/Pranjal.jpg" class="img-fluid col-md-12 col-12 rounded"
+                                alt="Student 2">
                             <div class="ps-3 pt-3">
                                 <p class="text-secondary">
                                     <span class="text-light fw-bold">Pranjal Ashok Singh</span><br>Backend Designer
@@ -503,7 +569,8 @@
                     <!-- Single Student -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="border rounded">
-                            <img src="images/Alumni/Sushil.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 3" style="overflow: hidden;">
+                            <img src="images/Alumni/Sushil.jpg" class="img-fluid col-md-12 col-12 rounded"
+                                alt="Student 3" style="overflow: hidden;">
                             <div class="ps-3 pt-3">
                                 <p class="text-secondary">
                                     <span class="fw-bold text-light">Sushil Kumar Verma</span><br>Backend Designer
@@ -514,7 +581,8 @@
                     <!-- Single Student -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="border rounded">
-                            <img src="images/Alumni/Abhishek.jpg" class="img-fluid col-md-12 col-12 rounded" alt="Student 3" style="overflow: hidden;">
+                            <img src="images/Alumni/Abhishek.jpg" class="img-fluid col-md-12 col-12 rounded"
+                                alt="Student 3" style="overflow: hidden;">
                             <div class="ps-3 pt-3">
                                 <p class="text-secondary">
                                     <span class="fw-bold text-light">Abhishek Kumar Yadav</span><br>Web Developer
@@ -608,16 +676,22 @@
                         <button class="accordion-button fw-bold border rounded-2" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
-                            Are there any prerequisites for enrolling in courses on the computer science education website?
+                            Are there any prerequisites for enrolling in courses on the computer science education
+                            website?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body text-secondary">
-                            While some advanced courses may have specific prerequisites, the majority of our introductory 
-                            and intermediate-level courses do not require any prior knowledge beyond basic computer literacy. We welcome learners from diverse backgrounds and provide resources to support individuals 
-                            in building their skills from the ground up. Whether you're a high school student, college graduate, or working professional looking to switch careers, there's something for everyone on our platform.
-                        
+                            While some advanced courses may have specific prerequisites, the majority of our
+                            introductory
+                            and intermediate-level courses do not require any prior knowledge beyond basic computer
+                            literacy. We welcome learners from diverse backgrounds and provide resources to support
+                            individuals
+                            in building their skills from the ground up. Whether you're a high school student, college
+                            graduate, or working professional looking to switch careers, there's something for everyone
+                            on our platform.
+
                         </div>
                     </div>
                 </div>
@@ -633,8 +707,12 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body text-secondary">
-                            While having a strong math background can be helpful, it's not always necessary to start learning computer science. Many introductory courses assume minimal math knowledge and focus on teaching fundamental programming concepts. However, as you progress to more advanced topics like algorithms, data structures, and machine learning, a basic understanding of math, particularly algebra and discrete mathematics, becomes increasingly important.
-                        
+                            While having a strong math background can be helpful, it's not always necessary to start
+                            learning computer science. Many introductory courses assume minimal math knowledge and focus
+                            on teaching fundamental programming concepts. However, as you progress to more advanced
+                            topics like algorithms, data structures, and machine learning, a basic understanding of
+                            math, particularly algebra and discrete mathematics, becomes increasingly important.
+
                         </div>
                     </div>
                 </div>
@@ -650,7 +728,11 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body text-secondary">
-                            The best programming language to learn first depends on your goals, interests, and the applications you're interested in developing. Popular choices for beginners include Python, Java, and JavaScript, as they have straightforward syntax, extensive documentation, and versatile applications across various domains. It's often recommended to start with a language that aligns with your intended projects or career path.
+                            The best programming language to learn first depends on your goals, interests, and the
+                            applications you're interested in developing. Popular choices for beginners include Python,
+                            Java, and JavaScript, as they have straightforward syntax, extensive documentation, and
+                            versatile applications across various domains. It's often recommended to start with a
+                            language that aligns with your intended projects or career path.
                         </div>
                     </div>
                 </div>
@@ -666,8 +748,13 @@
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body text-secondary">
-                            There are numerous resources available for learning programming, including online courses, tutorials, books, coding bootcamps, and community forums. Our website offers a range of programming courses designed to cater to learners of all levels, from beginners to advanced practitioners. Additionally, programming communities such as Stack Overflow, GitHub, and Reddit are valuable sources of knowledge, support, and collaboration for programmers of all skill levels.
-                        
+                            There are numerous resources available for learning programming, including online courses,
+                            tutorials, books, coding bootcamps, and community forums. Our website offers a range of
+                            programming courses designed to cater to learners of all levels, from beginners to advanced
+                            practitioners. Additionally, programming communities such as Stack Overflow, GitHub, and
+                            Reddit are valuable sources of knowledge, support, and collaboration for programmers of all
+                            skill levels.
+
                         </div>
                     </div>
                 </div>
@@ -683,7 +770,8 @@
                 <img src="images/moreQuestions/dood2.png" alt="">
                 <img src="images/moreQuestions/dood3.png" alt="">
             </div>
-            <p>If you cannot find answers to your questions in our FAQ, you can always contact us. We will answer to you asap</p>
+            <p>If you cannot find answers to your questions in our FAQ, you can always contact us. We will answer to you
+                asap</p>
             <button>Contact Us</button>
         </div>
         <!-- More Questions end  -->
@@ -695,12 +783,18 @@
                     <h1 class="fw-bold">Trusted by over 800+ students</h1>
                 </div>
                 <div class="d-flex justify-content-between mb-5 pb-5">
-                    <div><img src="images/organizations/company-1.png" alt="Company 1" style="height: 100px; width: 20vw;"></div>
-                    <div><img src="images/organizations/company-2.png" alt="Company 2" style="height: 100px; width: 20vw;"></div>
-                    <div><img src="images/organizations/company-3.png" alt="Company 3" style="height: 100px; width: 100px;"></div>
-                    <div><img src="images/organizations/company-4.png" alt="Company 4" style="height: 100px; width: 100px;"></div>
-                    <div><img src="images/organizations/company-5.png" alt="Company 5" style="height: 100px; width: 10vw;"></div>
-                    <div><img src="images/organizations/company-6.png" alt="Company 6" style="height: 100px; width: 7vw;"></div>
+                    <div><img src="images/organizations/company-1.png" alt="Company 1"
+                            style="height: 100px; width: 20vw;"></div>
+                    <div><img src="images/organizations/company-2.png" alt="Company 2"
+                            style="height: 100px; width: 20vw;"></div>
+                    <div><img src="images/organizations/company-3.png" alt="Company 3"
+                            style="height: 100px; width: 100px;"></div>
+                    <div><img src="images/organizations/company-4.png" alt="Company 4"
+                            style="height: 100px; width: 100px;"></div>
+                    <div><img src="images/organizations/company-5.png" alt="Company 5"
+                            style="height: 100px; width: 10vw;"></div>
+                    <div><img src="images/organizations/company-6.png" alt="Company 6"
+                            style="height: 100px; width: 7vw;"></div>
                 </div>
             </div>
         </section>
