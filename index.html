@@ -248,6 +248,58 @@
             filter: blur(2px)
         }
 
+        .redy-to-join{
+            border: 2px solid white;
+            border-radius: 20px;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+            padding: 20px;
+            max-width: 800px;
+        }
+        #rtj{
+            font-size: 30px;
+        }
+        #rtj-d{
+            font-size: 20px;
+        }
+        .button-side>button{
+            border: 2px solid aqua;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            transition: 0.3s ease;
+        }
+        .button-side>button:hover{
+            background-color: aqua;
+            color: black;
+        }
+        @media(max-width : 820px){
+            .redy-to-join{
+            border: 2px solid white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+            padding: 20px;
+            max-width: 800px;
+        }
+        #rtj{
+            text-align: center;
+        }
+        #rtj-d{
+            text-align: center;
+        }
+        }
+
     </style>
 
     <title>TechXpert</title>
@@ -255,9 +307,9 @@
 
 <body>
     <!-- AI bot icon -->
-    <a href="http://localhost:3000/" class="ai-bot-icon">
+    <!-- <a href="http://localhost:3000/" class="ai-bot-icon">
         <img src="./images/aibot.png" alt="AI Bot Icon">
-    </a>
+    </a> -->
     <header class="container" style="display: flex; justify-content: center;">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg mb-5" style="width: 85vw; ">
@@ -525,16 +577,13 @@
 
         <!-- Ready To Join Section Start -->
         <section class="container mt-5 mb-5">
-            <div class="d-md-block d-lg-flex justify-content-between align-items-center rounded p-5 text-center text-lg-start"
-                style="background-color: rgb(94, 132, 165);">
-                <div class="text-white ">
-                    <h1 class="fw-bold" style="color: #ffffff;">Ready To Join?</h1>
-                    <p>We have so many courses, that you can enroll. Register for enrollment.</p>
+            <div class="redy-to-join">
+                <div class="text-side">
+                    <p id="rtj">Ready To Join?</p>
+                    <p id="rtj-d">We have so many courses, that you can enroll. Register for enrollment.      &nbsp; &nbsp;&nbsp;  </p>
                 </div>
-                <div id="registerNow">
-                    <a href="http://localhost:3000/login">
-                        <button type="button" class="btn btn btn-success">Register Now</button>
-                    </a>
+                <div class="button-side">
+                    <button>Register</button>
                 </div>
             </div>
         </section>
