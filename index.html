@@ -32,7 +32,8 @@
             top: 0;
             width: 85vw;
             z-index: 1000;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.196), rgba(255, 255, 255, 0.05));
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.196), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
             border-bottom: 2px solid rgba(173, 212, 246, 0.772);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -94,7 +95,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 30px;
+            margin: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
             transition: 0.3s ease-out;
@@ -214,13 +216,43 @@
             color: black;
         }
 
+        /* Styling for AI bot icon */
+        .ai-bot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .ai-bot-icon img {
+            width: 70px; /* Adjust the size of the icon as needed */
+            border-radius: 60%; /* Make the icon circular */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+        }
+
+        .ai-bot-icon:hover {
+            transform: scale(1.1); /* Zoom in slightly on hover */
+        }
       
+        @media(max-width:1000px){
+            .cor-row{
+                display: block;
+                width: 75%;
+                min-width: 300px;
+            }
+        }
     </style>
 
     <title>TechXpert</title>
 </head>
 
 <body>
+    <!-- AI bot icon -->
+    <a href="http://localhost:3000/" class="ai-bot-icon">
+        <img src="./images/aibot.png" alt="AI Bot Icon">
+    </a>
     <header class="container" style="display: flex; justify-content: center;">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg mb-5" style="width: 85vw; ">
