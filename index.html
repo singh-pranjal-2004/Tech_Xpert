@@ -33,7 +33,8 @@
             top: 0;
             width: 85vw;
             z-index: 1000;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.196), rgba(255, 255, 255, 0.05));
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.196), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
             border-bottom: 2px solid rgba(173, 212, 246, 0.772);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -102,7 +103,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 30px;
+            margin: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
             transition: 0.3s ease-out;
@@ -252,6 +254,10 @@
 </head>
 
 <body>
+    <!-- AI bot icon -->
+    <a href="http://localhost:3000/" class="ai-bot-icon">
+        <img src="./images/aibot.png" alt="AI Bot Icon">
+    </a>
     <header class="container" style="display: flex; justify-content: center;">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg mb-5" style="width: 85vw; ">
