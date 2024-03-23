@@ -280,20 +280,36 @@
 
         /* For popup */
         .popup-container {
-            display: block;
-            position: absolute;
-            width: 600px;
-            height: 200px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.386);
-            padding: 20px;
-            border: 3px solid aqua;
-            border-radius: 50px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 20%;
+            right: 20px;
+            animation: bounce 1.5s 10;
+            border: 2px solid #3498db;
+            background-color: rgba(0, 0, 0, 0.308);
+            z-index: 10000;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 600px;
             color: white;
-            z-index: 999;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
         }
 
         .popup-content {
@@ -302,10 +318,11 @@
 
         .close-btn {
             position: absolute;
-            top: 25px;
-            right: 25px;
-            font-size: 30px;
+            top: 3.5px;
+            right: 10px;
+            font-size: 20px;
             cursor: pointer;
+            color: white;
         }
 
         @media(max-width : 820px) {
@@ -371,10 +388,9 @@
     <!-- Motivational Thoughts POPUP -->
     <div class="popup-container" id="popupContainer">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">×</span>
+            <span class="close-btn">×</span>
             <img src="./pngwing.com.png" alt="" style="height: 70px;">
-            <p id="quote" style="font-size: 30px;">"HONESTY IS THE BEST POLICY"</p>
-            <p id="quote">- Suryansh Pandey</p>
+            <p id="quote" style="font-size: 1rem;">"HONESTY IS THE BEST POLICY"</p>
         </div>
     </div>
 
@@ -385,7 +401,8 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg mb-5" style="width: 85vw; ">
             <div class="container">
-                <a class="navbar-brand fs-2 fw-bold" href="#" id="logo"><img src="./images/logoWhite.png" alt="" height="70px" width="70px"></a>
+                <a class="navbar-brand fs-2 fw-bold" href="#" id="logo"><img src="./images/logoWhite.png" alt=""
+                        height="70px" width="70px"></a>
                 <div class="d-flex justify-content-end">
                     <!-- <button type="button"
                         class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold" >Register</button>
@@ -965,7 +982,7 @@
         }
 
         // Add event listener to toggle button
-        themeToggle.addEventListener('click', toggleTheme);
+        // themeToggle.addEventListener('click', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function () {
             const accordionItems = document.querySelectorAll(".accordion-item");
@@ -983,20 +1000,35 @@
             });
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            showPopup();
+        // For PopUp
+        document.querySelector('.close-btn').addEventListener('click', function () {
+            document.getElementById('popupContainer').style.display = 'none';
         });
-
-        function showPopup() {
-            var popup = document.getElementById("popupContainer");
-            popup.style.display = "block";
+        const motivationalThoughts = [
+            "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "You are never too old to set another goal or to dream a new dream.",
+            "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+            "The only limit to our realization of tomorrow will be our doubts of today. Let us move forward with strong and active faith.",
+            "In the middle of difficulty lies opportunity.",
+            "The only way to achieve the impossible is to believe it is possible."
+        ];
+        function displayMotivationalThought() {
+            const thoughtIndex = Math.floor(Math.random() * motivationalThoughts.length);
+            const thought = motivationalThoughts[thoughtIndex];
+            document.getElementById('quote').textContent = "\"" + thought + "\"";
         }
+        displayMotivationalThought();
+        setInterval(displayMotivationalThought, 5000);
+        
+        const popupContainer = document.getElementById('popupContainer');
 
-        function closePopup() {
-            var popup = document.getElementById("popupContainer");
-            popup.style.display = "none";
-        }
-
+        setTimeout(() => {
+            popupContainer.style.display = 'none';
+        }, 1500 * 10); // 1.5s animation * 10 times
 
     </script>
 </body>
